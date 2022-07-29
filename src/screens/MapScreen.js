@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import MapView, { Marker } from "react-native-maps";
+import * as Location from "expo-location";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import {
   StyleSheet,
   View,
   Dimensions,
   Image,
   Text,
-  TouchableOpacity,
+  TouchableOpacity
 } from "react-native";
 
-import * as Location from "expo-location";
-
-import Ionicons from "react-native-vector-icons/Ionicons";
+import MapBottomIcon from "../components/MapBottomIcon";
 
 export default function MapScreen({ navigation }) {
   const [location, setLocation] = useState(null);
@@ -33,6 +33,8 @@ export default function MapScreen({ navigation }) {
       }
 
       let location = await Location.getCurrentPositionAsync({});
+      console.log("Location: ", location);
+
       setLocation(location);
       setCurrentRegion({
         latitude: location.coords.latitude,
@@ -67,33 +69,9 @@ export default function MapScreen({ navigation }) {
         </TouchableOpacity>
       </View>
       <View style={styles.bitmojiContainer}>
-        <View style={styles.myBitmoji}>
-          <Image
-            style={styles.bitmojiImage}
-            source={require("../../assets/snapchat/personalBitmoji.png")}
-          />
-          <View style={styles.bitmojiTextContainer}>
-            <Text style={styles.bitmojiText}>My Bitmoji</Text>
-          </View>
-        </View>
-        <View style={styles.places}>
-          <Image
-            style={styles.bitmojiImage}
-            source={require("../../assets/snapchat/personalBitmoji.png")}
-          />
-          <View style={styles.bitmojiTextContainer}>
-            <Text style={styles.bitmojiText}>Places</Text>
-          </View>
-        </View>
-        <View style={styles.myFriends}>
-          <Image
-            style={styles.bitmojiImage}
-            source={require("../../assets/snapchat/personalBitmoji.png")}
-          />
-          <View style={styles.bitmojiTextContainer}>
-            <Text style={styles.bitmojiText}>Friends</Text>
-          </View>
-        </View>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="My Bitmoji"></MapBottomIcon>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Places"></MapBottomIcon>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Friends"></MapBottomIcon>
       </View>
     </View>
   );
@@ -130,40 +108,10 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 70,
     position: "absolute",
-    bottom: 10,
+    bottom: 20,
     flexDirection: "row",
     justifyContent: "space-between",
-  },
-  myBitmoji: {
-    width: 70,
-    height: 70,
-    alignItems: "center",
-    justifyContent: "center",
-    marginLeft: 5,
-  },
-  bitmojiImage: {
-    width: 50,
-    height: 50,
-  },
-  bitmojiTextContainer: {
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 4,
-  },
-  bitmojiText: {
-    fontSize: 10,
-    fontWeight: "700",
-  },
-  places: {
-    width: 70,
-    height: 70,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  myFriends: {
-    width: 70,
-    height: 70,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    paddingLeft: 5,
+    paddingRight: 5
+  }
 });
