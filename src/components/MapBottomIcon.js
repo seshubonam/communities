@@ -4,7 +4,7 @@ import { View, StyleSheet, Image, Text } from "react-native";
 
 export default function MapBottomIcon ({ imageUrl, iconText }) {
     return (
-      <View style={styles.iconContainer}>
+      <View style={[styles.iconContainer, styles.shadowProp]}>
         <View style={styles.iconImageContainer}>
           <Image
             style={styles.iconImage}
@@ -30,23 +30,32 @@ const styles = StyleSheet.create({
   iconImageContainer: {
     width: 60,
     alignItems: "center",
-    justifyContent: "center",
-    marginTop: 15
+    justifyContent: "center"
   },
   iconImage: {
-    width: 60,
-    height: 60,
+    width: 55,
+    height: 55,
   },
   iconTextContainer: {
     backgroundColor: "white",
+    position: "absolute",
     borderRadius: 20,
-    paddingTop: 2,
-    paddingLeft: 4,
-    paddingRight: 4,
-    paddingBottom: 2,
+    paddingTop: 3,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 3,
+    bottom: -5,
+    width: 80,
   },
   iconText: {
     fontSize: 11,
     fontWeight: "700",
-  }
+    textAlign: "center"
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+  },
 });

@@ -11,7 +11,10 @@ import {
   TouchableOpacity
 } from "react-native";
 
+import MapTopIcon from "../components/MapTopIcon";
 import MapBottomIcon from "../components/MapBottomIcon";
+import MapOptions from "../components/MapOptions";
+import MapDistrict from "../components/MapDistrict";
 
 export default function MapScreen({ navigation }) {
   const [location, setLocation] = useState(null);
@@ -24,6 +27,8 @@ export default function MapScreen({ navigation }) {
     longitudeDelta: 0.0421,
   });
 
+  const [currentDistrict, setCurrentDistrict] = useState('');
+
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -31,10 +36,9 @@ export default function MapScreen({ navigation }) {
         setErrorMsg("Permission to access location was denied");
         return;
       }
-
       let location = await Location.getCurrentPositionAsync({});
-      console.log("Location: ", location);
-
+      let region = await Location.reverseGeocodeAsync({ latitude: location.coords.latitude, longitude: location.coords.longitude, })
+      
       setLocation(location);
       setCurrentRegion({
         latitude: location.coords.latitude,
@@ -42,6 +46,10 @@ export default function MapScreen({ navigation }) {
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       });
+
+      // console.log(region[0]["district"])
+      
+      setCurrentDistrict(region[0]["district"])
     })();
   }, []);
 
@@ -56,6 +64,23 @@ export default function MapScreen({ navigation }) {
         showsUserLocation={true}
         showsMyLocationButton={true}
       />
+      {/* 1. MapTop begining implmentation and MapOptions beginning Implementation */}
+       {/* 2. Cleans up MapBottom Icons and adds closer snap chat styling to icons  */}
+      <View style={styles.mapTopContainer}>
+        <View style={styles.mapTopContainerLeft}>
+          <MapTopIcon imageUrl={require("../../assets/snapchat/placeholder.png")} />
+          <MapTopIcon imageUrl={require("../../assets/snapchat/searchw.png")} small={true} />
+          <MapDistrict imageUrl={require("../../assets/snapchat/placeholder.png")} district={currentDistrict} />
+        </View>
+
+        <View style= {styles.mapTopContainerRight}>
+          <MapTopIcon imageUrl={require("../../assets/snapchat/gearw.png")} smaller={true} />
+        </View>
+
+      </View>
+
+      <MapOptions />
+
       <View style={styles.locationContainer}>
         <TouchableOpacity
           style={styles.userLocation}
@@ -68,7 +93,7 @@ export default function MapScreen({ navigation }) {
           <Ionicons name="ios-navigate" size={15} color="black" />
         </TouchableOpacity>
       </View>
-      <View style={styles.bitmojiContainer}>
+      <View style={styles.mapBottomContainer}>
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="My Bitmoji"></MapBottomIcon>
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Places"></MapBottomIcon>
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Friends"></MapBottomIcon>
@@ -104,14 +129,33 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginLeft: 8,
   },
-  bitmojiContainer: {
+  mapBottomContainer: {
     width: "100%",
     height: 70,
     position: "absolute",
     bottom: 20,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingLeft: 5,
-    paddingRight: 5
-  }
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+  mapTopContainer: {
+    width: "100%",
+    height: 70,
+    position: "absolute",
+    top: 50,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingLeft: 10,
+    paddingRight: 10
+  },
+  mapTopContainerLeft: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: 315,
+  },
+  searchIcon: {
+    width: 35,
+    height: 35,
+  },
 });
