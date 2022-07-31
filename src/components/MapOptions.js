@@ -8,9 +8,9 @@ export default function MapOptions() {
 
   return (
     <View style={styles.mapOptions}>
-      <MapOptionItem imageUrl={require("../../assets/snapchat/placeholder.png")} />
-      <MapOptionItem imageUrl={require("../../assets/snapchat/placeholder.png")} />
-      <MapOptionItem imageUrl={require("../../assets/snapchat/placeholder.png")} />
+      <MapOptionItem imageUrl={require("../../assets/snapchat/MapOptionsIcons1.png")} />
+      <MapOptionItem imageUrl={require("../../assets/snapchat/MapOptionsIcons2.png")} />
+      <MapOptionItem imageUrl={require("../../assets/snapchat/MapOptionsIcons3.png")} />
 
       <MapOptionItem imageUrl={require("../../assets/snapchat/downarroww.png")} transparent={true} />
     </View>

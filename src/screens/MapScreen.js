@@ -27,7 +27,7 @@ export default function MapScreen({ navigation }) {
     longitudeDelta: 0.0421,
   });
 
-  const [currentDistrict, setCurrentDistrict] = useState('...');
+  const [currentDistrict, setCurrentDistrict] = useState('Sunset Park');
 
   useEffect(() => {
     (async () => {
@@ -72,11 +72,11 @@ export default function MapScreen({ navigation }) {
               navigation.navigate("Profile");
             }}
           >
-          <MapTopIcon imageUrl={require("../../assets/snapchat/placeholder.png")} />
+          <MapTopIcon imageUrl={require("../../assets/snapchat/MapTopBitmojiIcon.png")} />
           </TouchableOpacity>
 
           <MapTopIcon imageUrl={require("../../assets/snapchat/searchw.png")} small={true} />
-          <MapDistrict imageUrl={require("../../assets/snapchat/placeholder.png")} district={currentDistrict} />
+          <MapDistrict imageUrl={require("../../assets/snapchat/MapStoriesImage.jpg")} district={currentDistrict} />
         </View>
 
         <View style= {styles.mapTopContainerRight}>
@@ -100,8 +100,8 @@ export default function MapScreen({ navigation }) {
         </TouchableOpacity>
       </View>
       <View style={styles.mapBottomContainer}>
-        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="My Bitmoji"></MapBottomIcon>
-        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Places"></MapBottomIcon>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/MapBottomBitmojiIcon.png")} iconText="My Bitmoji"></MapBottomIcon>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/MapBottomPlacesIcon.png")} iconText="Places"></MapBottomIcon>
 
         <TouchableOpacity
             activeOpacity={0.8}
@@ -112,7 +112,7 @@ export default function MapScreen({ navigation }) {
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Communities"></MapBottomIcon>
         </TouchableOpacity>
 
-        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Friends"></MapBottomIcon>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/MapBottomFriendsIcon.png")} iconText="Friends"></MapBottomIcon>
       </View>
     </View>
   );

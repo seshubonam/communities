@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     },
     profileIcon: {
       width: 40,
-      height: 40
+      height: 50
     },
     smallIcon: {
       width: 35,

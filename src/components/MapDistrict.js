@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     currentLocationStory: {
       width: 35,
       height: 35,
+      borderRadius: 50,
     },
     currentLocationDistrict: {
       marginRight: 30,

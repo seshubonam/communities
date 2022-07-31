@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   iconImage: {
     width: 55,
     height: 55,
+    borderRadius: 50,
   },
   iconTextContainer: {
     backgroundColor: "white",
