@@ -5,8 +5,8 @@ export default function ProfileScreen() {
   return (
     <ImageBackground source={require("../../assets/snapchat/3dBitmojiProfilePage.png")} resizeMode="cover" style={styles.backgroundImage}>
       <View style={ styles.container }>
-          <View style={ styles.communitiesContainer }>
-            <View style={ styles.communitiesContent }>
+          <View style={ styles.profileContainer }>
+            <View style={ styles.profileContent }>
               <Text>
                 Profile Screen
               </Text>
@@ -27,4 +27,17 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: "center",
     },
+    profileContainer: {
+      height: "70%",
+      width: "100%",
+      backgroundColor: "#fff",
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+      borderBottomLeftRadius: 0,
+      borderBottomRightRadius: 0,
+    },
+    profileContent: {
+      marginTop: 50,
+      marginLeft: 40
+    }
   });
