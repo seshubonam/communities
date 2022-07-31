@@ -75,7 +75,7 @@ export default function MapScreen({ navigation }) {
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={() => {
-              navigation.navigate("Profile");
+              navigation.navigate("ProfileStack");
             }}
           >
           <MapTopIcon imageUrl={require("../../assets/snapchat/MapTopBitmojiIcon.png")} />
