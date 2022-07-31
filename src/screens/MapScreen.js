@@ -61,9 +61,15 @@ export default function MapScreen({ navigation }) {
       <MapView
         style={styles.map}
         region={currentRegion}
-        showsUserLocation={true}
+        showsUserLocation={false}
         showsMyLocationButton={true}
-      />
+      >
+        <Marker
+          style={[styles.bitmojiLocation, styles.shadowProp]}
+          coordinate={{ latitude: currentRegion.latitude, longitude: currentRegion.longitude }}
+          image={require("../../assets/snapchat/MapBitmojiMeIcon.png") }
+        />
+      </MapView>
       <View style={styles.mapTopContainer}>
         <View style={styles.mapTopContainerLeft}>
           <TouchableOpacity
@@ -145,6 +151,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginLeft: 8,
   },
+  bitmojiLocation: {
+
+  },
   mapBottomContainer: {
     width: "100%",
     height: 70,
@@ -173,5 +182,11 @@ const styles = StyleSheet.create({
   searchIcon: {
     width: 35,
     height: 35,
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
   },
 });
