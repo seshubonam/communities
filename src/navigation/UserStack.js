@@ -15,6 +15,7 @@ import SpotlightScreen from "../screens/SpotlightScreen";
 
 // Stacks
 import ChatStack from "./ChatStack";
+import MapStack from "./MapStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -75,7 +76,7 @@ export default function UserStack() {
           tabBarStyle: { backgroundColor: "#000" },
         })}
       >
-        <Tab.Screen name="Map" component={MapScreen} options={{...screenOptions, headerShown: false}} />
+        <Tab.Screen name="Map" component={MapStack} options={{...screenOptions, headerShown: false }} />
         <Tab.Screen name="ChatStack" component={ChatStack} options={{ headerShown: false, tabBarShowLabel: false }} />
         <Tab.Screen
           name="Camera"

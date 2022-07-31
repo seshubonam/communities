@@ -27,7 +27,7 @@ export default function MapScreen({ navigation }) {
     longitudeDelta: 0.0421,
   });
 
-  const [currentDistrict, setCurrentDistrict] = useState('');
+  const [currentDistrict, setCurrentDistrict] = useState('...');
 
   useEffect(() => {
     (async () => {
@@ -64,11 +64,17 @@ export default function MapScreen({ navigation }) {
         showsUserLocation={true}
         showsMyLocationButton={true}
       />
-      {/* 1. MapTop begining implmentation and MapOptions beginning Implementation */}
-       {/* 2. Cleans up MapBottom Icons and adds closer snap chat styling to icons  */}
       <View style={styles.mapTopContainer}>
         <View style={styles.mapTopContainerLeft}>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => {
+              navigation.navigate("Profile");
+            }}
+          >
           <MapTopIcon imageUrl={require("../../assets/snapchat/placeholder.png")} />
+          </TouchableOpacity>
+
           <MapTopIcon imageUrl={require("../../assets/snapchat/searchw.png")} small={true} />
           <MapDistrict imageUrl={require("../../assets/snapchat/placeholder.png")} district={currentDistrict} />
         </View>
