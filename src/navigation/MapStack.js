@@ -6,7 +6,7 @@ import MapScreen from "../screens/MapScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
 // Modals
-import PlacesModal from "../modals/PlacesModal";
+import CommunitiesModal from "../modals/CommunitiesModal";
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ export default function MapStack() {
         <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Group>
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Places" component={PlacesModal} />
+        <Stack.Screen name="Communities" component={CommunitiesModal} />
       </Stack.Group>
     </Stack.Navigator>
   );

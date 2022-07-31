@@ -102,6 +102,16 @@ export default function MapScreen({ navigation }) {
       <View style={styles.mapBottomContainer}>
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="My Bitmoji"></MapBottomIcon>
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Places"></MapBottomIcon>
+
+        <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => {
+              navigation.navigate("Communities");
+            }}
+        >
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Communities"></MapBottomIcon>
+        </TouchableOpacity>
+
         <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Friends"></MapBottomIcon>
       </View>
     </View>
@@ -142,8 +152,8 @@ const styles = StyleSheet.create({
     bottom: 20,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingLeft: 20,
-    paddingRight: 20
+    paddingLeft: 15,
+    paddingRight: 15
   },
   mapTopContainer: {
     width: "100%",

@@ -41,16 +41,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     borderRadius: 20,
     paddingTop: 3,
-    paddingLeft: 10,
-    paddingRight: 10,
     paddingBottom: 3,
     bottom: -5,
-    width: 80,
+    width: 85,
   },
   iconText: {
     fontSize: 11,
     fontWeight: "700",
-    textAlign: "center"
+    textAlign: "center",
   },
   shadowProp: {
     shadowColor: '#171717',
