@@ -3,7 +3,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // Screens
 import MapScreen from "../screens/MapScreen";
-import ProfileScreen from "../screens/ProfileScreen";
 import ProfileStack from "./ProfileStack";
 
 // Modals
