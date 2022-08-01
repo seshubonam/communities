@@ -2,10 +2,10 @@ import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 
 
-export default function MapTopIcon ({ imageUrl, small, smaller }) {
+export default function MapTopIcon ({ imageUrl, small, smaller, smallest }) {
     return (
         <View style={styles.profileIconContainer}>
-          <Image style={small ? styles.smallIcon : smaller ? styles.smallerIcon : styles.profileIcon} source={imageUrl} />
+          <Image style={small ? styles.smallIcon : smaller ? styles.smallerIcon : smallest ? styles.smallestIcon : styles.profileIcon} source={imageUrl} />
         </View>
     );
 };
@@ -30,5 +30,9 @@ const styles = StyleSheet.create({
     smallerIcon: {
       width: 25,
       height: 25,
+    },
+    smallestIcon: {
+      width: 15,
+      height: 15,
     }
   });

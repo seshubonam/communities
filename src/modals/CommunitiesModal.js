@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function CommunitiesModal({ navigation }) {
-  const [text, onChangeText] = useState("Search for Commmunities");
+  const [text, onChangeText] = useState("Search for Communities");
 
   return (
     <View style={ styles.container }>
