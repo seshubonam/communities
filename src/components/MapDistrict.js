@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     marginLeft: 5,
-
   },
   currentLocationStory: {
     width: 35,

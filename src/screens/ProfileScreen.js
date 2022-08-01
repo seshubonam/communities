@@ -38,43 +38,43 @@ export default function ProfileScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "flex-end",
-      flexDirection: "column",
-    },
-    backgroundImage: {
-      flex: 1,
-      justifyContent: "center",
-    },
-    profileTopContainer: {
-      width: "100%",
-      height: 70,
-      position: "absolute",
-      top: 50,
-      flexDirection: "row",
-      justifyContent: "space-between",
-      paddingLeft: 10,
-      paddingRight: 10
-    },
-    profileTopLeft: {
-    },
-    profileTopRight: {
-      justifyContent: "space-between",
-      flexDirection: "row",
-      width: 108
-    },
-    profileContainer: {
-      height: "70%",
-      width: "100%",
-      backgroundColor: "#fff",
-      borderTopLeftRadius: 20,
-      borderTopRightRadius: 20,
-      borderBottomLeftRadius: 0,
-      borderBottomRightRadius: 0,
-    },
-    profileContent: {
-      marginTop: 50,
-      marginLeft: 40
-    }
+  container: {
+    flex: 1,
+    justifyContent: "flex-end",
+    flexDirection: "column",
+  },
+  backgroundImage: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  profileTopContainer: {
+    width: "100%",
+    height: 70,
+    position: "absolute",
+    top: 50,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingLeft: 10,
+    paddingRight: 10
+  },
+  profileTopLeft: {
+  },
+  profileTopRight: {
+    justifyContent: "space-between",
+    flexDirection: "row",
+    width: 108
+  },
+  profileContainer: {
+    height: "70%",
+    width: "100%",
+    backgroundColor: "#fff",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+  },
+  profileContent: {
+    marginTop: 50,
+    marginLeft: 40
+  }
   });
