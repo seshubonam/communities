@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   communitiesContainer: {
-    height: "58%",
+    height: "51%",
     width: "100%",
     backgroundColor: "#f7f8f8",
     borderTopLeftRadius: 20,
@@ -85,11 +85,11 @@ const styles = StyleSheet.create({
     left: 15,
   },
   searchCommunitiesIcon: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
   },
   input: {
-    height: 50,
+    height: 45,
     width: "83%",
     backgroundColor: "#ebeced",
     borderRadius: 50,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   closeCommunitiesModalContainer: {
     backgroundColor: "#eceef0",
-    padding: 18,
+    padding: 15,
     borderRadius: 50,
   },
   closeCommunitiesIcon: {

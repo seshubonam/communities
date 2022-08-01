@@ -11,7 +11,7 @@ export default function CommunitiesCard ({ name, description, distance, imageUrl
 
         <View style= { styles.featuredCommunityTextContainer }>
           <Text style={ styles.communityHeaderText }>{ name }</Text>
-          <Text>{description} • {distance}</Text>
+          <Text style={ styles.communityText }>{description} • {distance}</Text>
         </View>
 
         <View style={ styles.featuredCommunityJoinContainer }>
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderColor: "eeeeee",
     borderRadius: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 15,
+    paddingBottom: 15,
     paddingLeft: 10,
     paddingRight: 10,
     marginBottom: 15,
@@ -52,14 +52,17 @@ const styles = StyleSheet.create({
   },
   communityHeaderText: {
     fontWeight: "600",
-    fontSize: 18,
+    fontSize: 15,
     marginTop: 5,
     marginBottom: 5,
   },
+  communityText: {
+    fontSize: 13,
+  },
   featuredCommunityJoinContainer: {
     position: "absolute",
-    top: 10,
-    right: 10,
+    top: 26,
+    right: 15,
     backgroundColor: "#eceef0",
     borderRadius: 15,
     width: 50,
@@ -68,6 +71,7 @@ const styles = StyleSheet.create({
   featuredCommunityJoinText: {
     textAlign: "center",
     fontWeight: "800",
-    marginTop: 6,
+    marginTop: 7,
+    fontSize: 12
   }
 });
