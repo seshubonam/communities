@@ -14,7 +14,7 @@ export default function ProfileScreen({ navigation }) {
             }}
           >
             <View style={ styles.profileTopLeft }>
-              <MapTopIcon imageUrl={require("../../assets/snapchat/left-arroww.png")} smaller={true} />
+              <MapTopIcon imageUrl={require("../../assets/snapchat/left-arroww.png")} smallest={true} />
             </View>
           </TouchableOpacity>
           <View style={ styles.profileTopRight }>

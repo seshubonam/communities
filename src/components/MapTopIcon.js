@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
       height: 25,
     },
     smallestIcon: {
-      width: 15,
-      height: 15,
+      width: 20,
+      height: 20,
     }
   });
