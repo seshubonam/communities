@@ -13,8 +13,7 @@ export default function OrganizationModal({ navigation }) {
             <TouchableOpacity
               activeOpacity={0.7}
               onPress={() => {
-                navigation.goBack(); /* Hacky work around until we figure out how to remove modals cleaner */ 
-                navigation.navigate("Communities");
+                navigation.popToTop();
               }}
             >
               <View style={ styles.closeOrganizationModalContainer }>
