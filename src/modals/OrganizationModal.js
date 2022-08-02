@@ -21,6 +21,37 @@ export default function OrganizationModal({ navigation }) {
               </View>
             </TouchableOpacity>
           </View>
+
+          <View style={styles.communityInfo}>
+
+            <View style={styles.communityInfoLeft}>
+              <Image style={styles.communityImage }source={require("../../assets/snapchat/CodeTalkLogo.png")}/>
+            </View>
+            
+            <View style={styles.communityInfoRight}>
+              <Text>
+                CodeTalk
+              </Text>
+              <Text>
+                Technology Training Program
+              </Text>
+            </View>
+
+          </View>
+          <View style={styles.communityHoursNumAddy}>
+            <View style={styles.communityHours}>
+              <Text>
+                9am - 5pm
+              </Text>
+            </View>
+            <View style={styles.communityAddressNumber}>
+              <View>
+                <Image style={styles.locImageStyle} source={require("../../assets/snapchat/blueLocationPoint.png")}></Image>
+              </View>
+
+            </View>
+          </View>
+            
         </View>
       </View>
     </View>
@@ -45,7 +76,8 @@ const styles = StyleSheet.create({
   organizationContent: {
     marginTop: 20,
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
+    // flex: "row",
   },
   organizationContentTop: {
 
@@ -61,5 +93,38 @@ const styles = StyleSheet.create({
     width: 15,
     height: 15
   },
+  communityImage: {
+    width: 115,
+    height: 115,
+    // marginTop: 70,
+    // flex: "row",
+  },
+  communityInfo: {
+    flexDirection: "row",
+    marginLeft: 70,
+    marginRight: 70,
+    marginTop: 40,
+  },
+  communityInfoLeft: {
+    marginLeft: -60,
+  },
+  communityInfoRight: {
+    marginLeft: 30,
+    marginTop: 25,
+  },
+  communityHoursNumAddy: {
+
+  },
+  communityHours: {
+    marginLeft: 31,
+    marginTop: 5,
+  },
+  communityAddressNumber: {
+
+  },
+  locImageStyle: {
+    width: 20,
+    height: 20,
+  }
 
 });
