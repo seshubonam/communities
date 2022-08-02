@@ -10,7 +10,6 @@ export default function OrganizationModal({ navigation }) {
       <View style={ styles.organizationContainer }>
         <View style={ styles.organizationContent }>
           <View style={ styles.organizationContentTop }>
-
             <TouchableOpacity
               activeOpacity={0.7}
               onPress={() => {
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   organizationContainer: {
-    height: "90%",
+    height: "98%",
     width: "100%",
     backgroundColor: "#f7f8f8",
     borderTopLeftRadius: 20,
@@ -50,13 +49,14 @@ const styles = StyleSheet.create({
     marginRight: 15
   },
   organizationContentTop: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+
   },
   closeOrganizationModalContainer: {
     backgroundColor: "#eceef0",
-    padding: 18,
+    padding: 15,
     borderRadius: 50,
+    position: "absolute",
+    right: 0,
   },
   closeOrganizationIcon: {
     width: 15,

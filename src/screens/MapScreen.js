@@ -68,6 +68,7 @@ export default function MapScreen({ navigation }) {
           style={[styles.bitmojiLocation, styles.shadowProp]}
           coordinate={{ latitude: currentRegion.latitude, longitude: currentRegion.longitude }}
           image={require("../../assets/snapchat/MapBitmojiMeIcon.png") }
+          // onPress={() => navigation.navigate("Communities")}
         />
       </MapView>
       <View style={styles.mapTopContainer}>
