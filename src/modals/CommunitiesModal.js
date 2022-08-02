@@ -38,6 +38,7 @@ export default function CommunitiesModal({ navigation }) {
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={() => {
+              navigation.goBack();
               navigation.navigate("Organization");
             }}
           >
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 45,
-    width: "83%",
+    width: "85%",
     backgroundColor: "#ebeced",
     borderRadius: 50,
     paddingLeft: 74,

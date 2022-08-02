@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   communityHeaderText: {
     fontWeight: "600",
-    fontSize: 15,
+    fontSize: 16,
     marginTop: 5,
     marginBottom: 5,
   },

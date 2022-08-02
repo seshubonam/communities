@@ -9,13 +9,13 @@ export default function OrganizationModal({ navigation }) {
     <View style={ styles.container }>
       <View style={ styles.organizationContainer }>
         <View style={ styles.organizationContent }>
-
           <View style={ styles.organizationContentTop }>
 
             <TouchableOpacity
               activeOpacity={0.7}
               onPress={() => {
-                navigation.goBack();
+                navigation.goBack(); /* Hacky work around until we figure out how to remove modals cleaner */ 
+                navigation.navigate("Communities");
               }}
             >
               <View style={ styles.closeOrganizationModalContainer }>
@@ -23,7 +23,6 @@ export default function OrganizationModal({ navigation }) {
               </View>
             </TouchableOpacity>
           </View>
-
         </View>
       </View>
     </View>
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   organizationContainer: {
-    height: "100%",
+    height: "90%",
     width: "100%",
     backgroundColor: "#f7f8f8",
     borderTopLeftRadius: 20,
