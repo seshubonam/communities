@@ -78,10 +78,10 @@ export default function MapScreen({ navigation }) {
               navigation.navigate("ProfileStack");
             }}
           >
-          <MapTopIcon imageUrl={require("../../assets/snapchat/MapTopBitmojiIcon.png")} />
+          <MapTopIcon style={ styles.mapTopComponent } imageUrl={require("../../assets/snapchat/MapTopBitmojiIcon.png")} />
           </TouchableOpacity>
 
-          <MapTopIcon imageUrl={require("../../assets/snapchat/searchw.png")} small={true} />
+          <MapTopIcon style={ styles.mapTopComponent } imageUrl={require("../../assets/snapchat/searchw.png")} small={true} />
           <MapDistrict imageUrl={require("../../assets/snapchat/MapStoriesImage.jpg")} district={currentDistrict} />
         </View>
 
@@ -176,8 +176,10 @@ const styles = StyleSheet.create({
   },
   mapTopContainerLeft: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    width: 315,
+    width: "80%",
+  },
+  mapTopComponent: {
+    marginRight: 5,
   },
   searchIcon: {
     width: 35,

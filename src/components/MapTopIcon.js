@@ -2,9 +2,9 @@ import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 
 
-export default function MapTopIcon ({ imageUrl, small, smaller, smallest }) {
+export default function MapTopIcon ({ imageUrl, small, smaller, smallest, style}) {
     return (
-        <View style={styles.profileIconContainer}>
+        <View style={[styles.profileIconContainer, style]}>
           <Image style={small ? styles.smallIcon : smaller ? styles.smallerIcon : smallest ? styles.smallestIcon : styles.profileIcon} source={imageUrl} />
         </View>
     );

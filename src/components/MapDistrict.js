@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignContent: "center",
     alignItems: "center",
-    width: 200,
     height: 50,
   },
   currentLocationStoryContainer: {
@@ -41,6 +40,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   currentLocationDistrict: {
+    marginLeft: 15,
     marginRight: 30,
   },
   currentLocationDistrictText: {
