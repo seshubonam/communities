@@ -42,7 +42,7 @@ export default function ProfileScreen({ navigation }) {
 
             <View style={ styles.profileBadges }>
               <ProfileBadge imageUrl={require("../../assets/snapchat/SnapFriendsProfilePageIcon.png")} text={4} />
-              <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeZodiacBorder} textStyle={styles.profileBadgeZodiacText}/>
+              <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeZodiacBorder} textStyle={styles.profileBadgeZodiacText} />
               
             </View>
             
