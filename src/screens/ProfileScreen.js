@@ -44,7 +44,16 @@ export default function ProfileScreen({ navigation }) {
             <View style={ styles.profileBadges }>
               <ProfileBadge imageUrl={require("../../assets/snapchat/SnapFriendsProfilePageIcon.png")} text={4} />
               <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeZodiacText} />
-              <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"CodeTalk"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
+
+              <TouchableOpacity></TouchableOpacity>
+              <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={() => {
+                  navigation.navigate("CommunityMembers");
+                }}
+              >
+                <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"CodeTalk"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
+              </TouchableOpacity>
               <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"Snap Academies"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
             </View>
             
