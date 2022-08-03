@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
   profileBadgeText: {
     color: "#666d77",
-    fontSize: 20,
+    fontSize: 18,
     marginLeft: 10,
   }
   });
