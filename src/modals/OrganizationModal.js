@@ -77,19 +77,26 @@ export default function OrganizationModal({ navigation }) {
                 </View>
               </View>
             </View>
-          </View>  
+          </View> 
+          <View style={styles.buttonContainer}> 
+            <TouchableOpacity style={styles.joinButton}>
+              <Image style={styles.buttonImage} source={require("../../assets/snapchat/JoinButton.png")}/>
+            </TouchableOpacity>
+          </View>
+
+          
           <View style={styles.cardInfoContainer}>
             <View style={styles.aboutCardInfo}>
             <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
               About:
             </Text>
-            <OrgnizationInfoCard info= "Codetalk is a digital web technology job training program for low income, underemployed and underserved women. In an intensive and rigorous 16 week program we provide the skills, tools, training, professional development and support so that our graduates can pursue entry level positions in the technology sector."/>
+            <OrgnizationInfoCard info= "Codetalk is a digital web technology job training program for low income, underemployed and underserved women."/>
             </View>
             <View style={styles.yourImpactCardInfo}>
             <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
               Your Impact:
             </Text>
-            <OrgnizationInfoCard info= "In a supportive classroom environment you will learn the fundamentals of front end web development, and prepare for entry level positions in UX Design, QA, Content Management, Project Management, Front End Web Development, or similar."/>
+            <OrgnizationInfoCard info= "In a supportive classroom environment you will learn the fundamentals of front end web development and more!"/>
             </View>
             <View style={styles.reachOutCardInfo}>
             <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
@@ -97,7 +104,16 @@ export default function OrganizationModal({ navigation }) {
             </Text>
             <OrgnizationInfoCard info= "PlaceHolder Text"/>
             </View>
-          </View> 
+          </View>
+          <View style={styles.bottomImagesContainer}>
+            <View style={styles.badgeImageContainer}>
+              <Image style={styles.badgeImage} source={require("../../assets/snapchat/BadgeCodeTalk.png")}/>
+            </View>
+            <View style={styles.bitmojiImageContainer}>
+              <Image style={styles.bitmojiImage} source={require("../../assets/snapchat/tempBookSticker.png")}/>
+            </View>
+            
+           </View> 
         </View>
       </View>
     </View>
@@ -149,7 +165,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft: 70,
     marginRight: 70,
-    marginTop: 40,
+    marginTop: 15,
   },
   communityInfoLeft: {
     marginLeft: -60,
@@ -198,6 +214,41 @@ const styles = StyleSheet.create({
   },
   websiteContainer: {
     marginLeft: 30,
+  },
+  // joinButton: {
+  //   height: 25,
+  //   width: 50,
+  // },
+  buttonContainer: {
+    marginLeft: 275,
+    marginTop: 15,
+    marginBottom: -40,
+  },
+  buttonImage: {
+    height: 50,
+    width: 115,
+  },
+  bottomImagesContainer:
+  {
+    flexDirection: "row",
+    marginTop: 20,
+    marginLeft: 40,
+  },
+  badgeImage: {
+    height: 84,
+    width: 73,
+  },
+  bitmojiImage: {
+    height: 154,
+    width: 188,
+  },
+  badgeImageContainer: {
+    // marginLeft: 30,
+    
+  },
+  bitmojiImageContainer: {
+    marginLeft: 100,
+    marginTop: -25,
   },
 
 });
