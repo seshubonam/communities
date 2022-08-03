@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import CommunitiesCard from '../components/CommunitiesCard';
 import SearchBox from '../components/SearchBox';
 
 export default function CommunitiesModal({ navigation }) {
-  const [text, onChangeText] = useState("Discover Communities");
 
   return (
     <View style={ styles.container }>
