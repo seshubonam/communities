@@ -71,6 +71,7 @@ export default function MapScreen({ navigation }) {
           // onPress={() => navigation.navigate("Communities")}
         />
       </MapView>
+      
       <View style={styles.mapTopContainer}>
         <View style={styles.mapTopContainerLeft}>
           <TouchableOpacity
