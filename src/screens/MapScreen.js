@@ -117,7 +117,7 @@ export default function MapScreen({ navigation }) {
               navigation.navigate("Communities");
             }}
         >
-        <MapBottomIcon imageUrl={require("../../assets/snapchat/placeholder.png")} iconText="Communities"></MapBottomIcon>
+        <MapBottomIcon imageUrl={require("../../assets/snapchat/mapCommunitiesLogo.png")} iconText="Communities"></MapBottomIcon>
         </TouchableOpacity>
 
         <MapBottomIcon imageUrl={require("../../assets/snapchat/MapBottomFriendsIcon.png")} iconText="Friends"></MapBottomIcon>
