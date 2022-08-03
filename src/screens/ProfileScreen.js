@@ -42,6 +42,7 @@ export default function ProfileScreen({ navigation }) {
 
             <View style={ styles.profileBadges }>
               <ProfileBadge imageUrl={require("../../assets/snapchat/SnapFriendsProfilePageIcon.png")} text={4} />
+              <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeZodiacBorder} textStyle={styles.profileBadgeZodiacText}/>
               
             </View>
             
@@ -117,4 +118,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginRight: 20,
   },
+  profileBadgeZodiacBorder: {
+    marginLeft: 5,
+  },
+  profileBadgeZodiacText: {
+    color: "#3E1184",
+  }
 });

@@ -2,12 +2,12 @@ import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
 
 
-export default function ProfileBadge ({ imageUrl, text }) {
+export default function ProfileBadge ({ imageUrl, text, containerStyle, textStyle }) {
     return (
-      <View style={ styles.profileBadgeContainer }>
+      <View style={ [styles.profileBadgeContainer, containerStyle] }>
       <View style={ styles.profileBadge }>
         <Image style={ styles.profileBadgeImage } source={ imageUrl } />
-        <Text style={ styles.profileBadgeText }>{ text }</Text>
+        <Text style={ [styles.profileBadgeText, textStyle] }>{ text }</Text>
       </View>
     </View>
     );
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f7f8f8",
     borderRadius: 30,
     alignItems: "center",
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingTop: 4,
+    paddingBottom: 4,
     paddingLeft: 10,
     paddingRight: 10,
   },
