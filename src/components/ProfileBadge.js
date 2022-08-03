@@ -33,14 +33,14 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   profileBadgeImage: {
-    width: 25,
-    height: 25
+    width: 15,
+    height: 15
   },
 
   profileBadgeText: {
     color: "#666d77",
-    fontSize: 18,
-    marginLeft: 10,
+    fontSize: 12,
+    marginLeft: 5,
   }
   });
 

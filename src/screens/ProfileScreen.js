@@ -42,7 +42,9 @@ export default function ProfileScreen({ navigation }) {
 
             <View style={ styles.profileBadges }>
               <ProfileBadge imageUrl={require("../../assets/snapchat/SnapFriendsProfilePageIcon.png")} text={4} />
-              <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeZodiacBorder} textStyle={styles.profileBadgeZodiacText} />
+              <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeZodiacText} />
+              <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"CodeTalk"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
+              <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"Snap Academies"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
               
             </View>
             
@@ -102,13 +104,13 @@ const styles = StyleSheet.create({
     marginRight: 20
   },
   profileQRCode: {
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
   },
   profileTopRightTextHeader: {
     fontWeight: "700",
-    fontSize: 20,
-    marginBottom: 15,
+    fontSize: 18,
+    marginBottom: 12,
   },
   profileTopRightText: {
     color: "#666d77",
@@ -118,10 +120,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginRight: 20,
   },
-  profileBadgeZodiacBorder: {
+  profileBadgeContainerStyle: {
     marginLeft: 5,
   },
   profileBadgeZodiacText: {
     color: "#3E1184",
+  },
+  profileBadgeIconText: {
+    color: "#2C50FA",
   }
 });
