@@ -45,16 +45,16 @@ export default function ProfileScreen({ navigation }) {
               <ProfileBadge imageUrl={require("../../assets/snapchat/SnapFriendsProfilePageIcon.png")} text={4} />
               <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeZodiacText} />
 
-              <TouchableOpacity></TouchableOpacity>
               <TouchableOpacity
                 activeOpacity={0.7}
                 onPress={() => {
                   navigation.navigate("CommunityMembers");
                 }}
               >
-                <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"CodeTalk"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
+                <ProfileBadge imageUrl={require("../../assets/snapchat/CodeTalkBadgeIcon.png")} text={"CodeTalk"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
               </TouchableOpacity>
-              <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"Snap Academies"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
+              
+              <ProfileBadge imageUrl={require("../../assets/snapchat/SnapAcademiesBadgeIcon.png")} text={"Snap Academies"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
             </View>
             
             <View style={ [styles.profilefindFriends, styles.shadowProp ] }>
@@ -142,10 +142,10 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   profileBadgeZodiacText: {
-    color: "#3E1184",
+    color: "#000000",
   },
   profileBadgeIconText: {
-    color: "#2C50FA",
+    color: "#000000",
   },
   profilefindFriends: {
     backgroundColor: "#fff",

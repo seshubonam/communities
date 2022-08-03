@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import CommunitiesCard from '../components/CommunitiesCard';
+import SearchBox from '../components/SearchBox';
 
 export default function CommunitiesModal({ navigation }) {
   const [text, onChangeText] = useState("Discover Communities");
@@ -12,12 +13,8 @@ export default function CommunitiesModal({ navigation }) {
         <View style={ styles.communitiesContent }>
 
           <View style={ styles.communitiesContentTop }>
-            
-            <View style={ styles.searchCommunitiesContainer }>
-              <Image style={ styles.searchCommunitiesIcon } source={require("../../assets/snapchat/CommunitiesModalSearchIcon.png")} />
-            </View>
 
-            <TextInput style={styles.input} onChangeText={onChangeText} value={text} clearTextOnFocus={true} />
+            <SearchBox initialText={"Discover Communities"} />
 
             <TouchableOpacity
               activeOpacity={0.7}
@@ -77,27 +74,6 @@ const styles = StyleSheet.create({
   communitiesContentTop: {
     flexDirection: "row",
     justifyContent: "space-between",
-  },
-  searchCommunitiesContainer: {
-    height: 50,
-    position: "absolute",
-    zIndex: 1,
-    top: 10,
-    left: 15,
-  },
-  searchCommunitiesIcon: {
-    width: 25,
-    height: 25,
-  },
-  input: {
-    height: 45,
-    width: "85%",
-    backgroundColor: "#ebeced",
-    borderRadius: 50,
-    paddingLeft: 74,
-    fontWeight: "700",
-    fontSize: 18,
-    color: "#666d77",
   },
   closeCommunitiesModalContainer: {
     backgroundColor: "#eceef0",
