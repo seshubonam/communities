@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, ImageBackground, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import MapTopIcon from '../components/MapTopIcon';
 import ProfileBadge from '../components/ProfileBadge';
+import ProfileCard from '../components/ProfileCard';
 
 export default function ProfileScreen({ navigation }) {
   return (
@@ -45,9 +46,16 @@ export default function ProfileScreen({ navigation }) {
               <ProfileBadge imageUrl={require("../../assets/snapchat/ZodiacSignProfilePageIcon.png")} text={"Scorpio"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeZodiacText} />
               <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"CodeTalk"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
               <ProfileBadge imageUrl={require("../../assets/snapchat/badgeIcon.png")} text={"Snap Academies"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
-              
             </View>
             
+            <View style={ [styles.profilefindFriends, styles.shadowProp ] }>
+            </View>
+
+            <ProfileCard text={"My Stories"} />
+            <ProfileCard text={"Friends"} style={ styles.profileCardContainerStyle }/>
+
+            <View style={ [styles.profilemyFriends, styles.shadowProp ] }>
+            </View>
           </View>
         </View>
       </View>
@@ -94,6 +102,7 @@ const styles = StyleSheet.create({
   profileContent: {
     marginTop: 25,
     marginLeft: 20,
+    marginRight: 20,
   },
   profileTopContainer: {
     flexDirection: "row",
@@ -128,5 +137,34 @@ const styles = StyleSheet.create({
   },
   profileBadgeIconText: {
     color: "#2C50FA",
-  }
+  },
+  profilefindFriends: {
+    backgroundColor: "#fff",
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 30,
+    paddingBottom: 30,
+    marginTop: 30,
+    marginBottom: 30,
+    borderRadius: 10,
+  },
+  profilemyFriends: {
+    backgroundColor: "#fff",
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 50,
+    paddingBottom: 60,
+    marginTop: 10,
+    borderRadius: 10,
+  },
+  profileCardContainerStyle: {
+    marginTop: 20,
+    marginBottom: 2,
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 1},
+    shadowOpacity: 0.02,
+    shadowRadius: 10,
+  },
 });
