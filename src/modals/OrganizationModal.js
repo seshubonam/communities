@@ -44,14 +44,33 @@ export default function OrganizationModal({ navigation }) {
                 9am - 5pm
               </Text>
             </View>
-            <View style={styles.communityAddressNumber}>
-              <View>
-                <Image style={styles.locImageStyle} source={require("../../assets/snapchat/blueLocationPoint.png")}></Image>
-              </View>
-
+            <View style={styles.communityAddress}>
+                <View>
+                  <Image style={styles.locImageStyle} source={require("../../assets/snapchat/blueLocationPoint.png")}/>
+                </View>
+                 <View style={styles.communityStreet}>
+                  <Text>
+                   St. Joseph Center
+                  </Text>
+                  <Text>
+                    204 Hampton Dr
+                  </Text>
+                  <Text>
+                    Venice, CA 90291
+                  </Text>
+                </View>
             </View>
-          </View>
-            
+            <View style={styles.phoneNumberContainer}>
+              <View style={styles.phoneImgContainer}>
+                <Image style={styles.phoneImg} source={require("../../assets/snapchat/TelephoneImg.png")}ß/>
+              </View>
+              <View style={styles.phoneNumber}>
+                <Text>
+                  (310) 396-6488
+                </Text>
+              </View>
+            </View>
+          </View>   
         </View>
       </View>
     </View>
@@ -113,18 +132,35 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
   communityHoursNumAddy: {
-
+    
   },
   communityHours: {
     marginLeft: 31,
     marginTop: 5,
   },
-  communityAddressNumber: {
-
-  },
   locImageStyle: {
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
+    // marginTop: ,
+  },
+  communityAddress: {
+    flexDirection: "row",
+    marginTop: 19,
+  },
+  communityStreet: {
+    marginLeft: 15,
+  },
+  phoneImg: {
+    width: 25,
+    height: 25,
+  },
+  phoneNumberContainer: {
+    flexDirection: "row",
+    marginTop: 19,
+    // marginLeft: 7,
+  },
+  phoneNumber: {
+    marginLeft: 15,
   }
 
 });
