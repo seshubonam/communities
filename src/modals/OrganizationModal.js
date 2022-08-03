@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-import CommunitiesCard from '../components/CommunitiesCard';
+import OrgnizationInfoCard from '../components/OrganizationInfoCard';
 
 export default function OrganizationModal({ navigation }) {
 
@@ -29,10 +29,10 @@ export default function OrganizationModal({ navigation }) {
             </View>
             
             <View style={styles.communityInfoRight}>
-              <Text>
+              <Text style= {{fontWeight: "600", fontSize:25}}>
                 CodeTalk
               </Text>
-              <Text>
+              <Text style= {{fontWeight: "300", fontSize: 15}}>
                 Technology Training Program
               </Text>
             </View>
@@ -40,7 +40,7 @@ export default function OrganizationModal({ navigation }) {
           </View>
           <View style={styles.communityHoursNumAddy}>
             <View style={styles.communityHours}>
-              <Text>
+              <Text style= {{fontSize: 14, fontWeight: "300"}}>
                 9am - 5pm
               </Text>
             </View>
@@ -64,13 +64,40 @@ export default function OrganizationModal({ navigation }) {
               <View style={styles.phoneImgContainer}>
                 <Image style={styles.phoneImg} source={require("../../assets/snapchat/TelephoneImg.png")}ß/>
               </View>
-              <View style={styles.phoneNumber}>
-                <Text>
-                  (310) 396-6488
-                </Text>
+              <View style={styles.phoneNumberWebsiteContainer}>
+                <View style={styles.phoneNumber}>
+                  <Text>
+                    (310) 396-6488
+                  </Text>
+                </View>
+                <View style={styles.websiteContainer}>
+                  <Text>
+                    www.stjosephctr.org/codetalk
+                  </Text>
+                </View>
               </View>
             </View>
-          </View>   
+          </View>  
+          <View style={styles.cardInfoContainer}>
+            <View style={styles.aboutCardInfo}>
+            <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
+              About:
+            </Text>
+            <OrgnizationInfoCard info= "Codetalk is a digital web technology job training program for low income, underemployed and underserved women. In an intensive and rigorous 16 week program we provide the skills, tools, training, professional development and support so that our graduates can pursue entry level positions in the technology sector."/>
+            </View>
+            <View style={styles.yourImpactCardInfo}>
+            <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
+              Your Impact:
+            </Text>
+            <OrgnizationInfoCard info= "In a supportive classroom environment you will learn the fundamentals of front end web development, and prepare for entry level positions in UX Design, QA, Content Management, Project Management, Front End Web Development, or similar."/>
+            </View>
+            <View style={styles.reachOutCardInfo}>
+            <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
+              Reach Out:
+            </Text>
+            <OrgnizationInfoCard info= "PlaceHolder Text"/>
+            </View>
+          </View> 
         </View>
       </View>
     </View>
@@ -137,10 +164,11 @@ const styles = StyleSheet.create({
   communityHours: {
     marginLeft: 31,
     marginTop: 5,
+    fontWeight: "650",
   },
   locImageStyle: {
-    width: 25,
-    height: 25,
+    width: 20,
+    height: 20,
     // marginTop: ,
   },
   communityAddress: {
@@ -151,8 +179,8 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   phoneImg: {
-    width: 25,
-    height: 25,
+    width: 20,
+    height: 20,
   },
   phoneNumberContainer: {
     flexDirection: "row",
@@ -161,6 +189,15 @@ const styles = StyleSheet.create({
   },
   phoneNumber: {
     marginLeft: 15,
-  }
+  },
+  cardInfoContainer: {
+    marginTop: 30,
+  },
+  phoneNumberWebsiteContainer: {
+    flexDirection: "row",
+  },
+  websiteContainer: {
+    marginLeft: 30,
+  },
 
 });
