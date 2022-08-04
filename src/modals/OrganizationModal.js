@@ -102,12 +102,25 @@ export default function OrganizationModal({ navigation }) {
             <Text style={{fontWeight: "500", fontSize: 17, marginBottom: 5}}>
               Reach Out:
             </Text>
-            <OrgnizationInfoCard info= "PlaceHolder Text"/>
+            
             </View>
           </View>
           <View style={styles.bottomImagesContainer}>
-            <View style={styles.badgeImageContainer}>
-              <Image style={styles.badgeImage} source={require("../../assets/snapchat/BadgeCodeTalk.png")}/>
+            <View style={styles.coordinatorImageContainer}>
+              <Image style={styles.coordinatorImage} source={require("../../assets/snapchat/OutreachCoord.png")}/>
+              <View style={styles.coordinatorNameContainer}>
+              <Text style={{fontSize: 15, fontWeight: "600"}}>
+                David Xavier
+              </Text>
+              <Text style={{fontWeight: "300"}}>
+                Outreach Coordinator
+              </Text>
+              <View style={styles.contactButtonContainer}>
+              <TouchableOpacity>
+                  <Image style={styles.contactButtonStyle} source={require("../../assets/snapchat/ContactButton.png")}></Image>
+                </TouchableOpacity>
+                </View>
+              </View>
             </View>
             <View style={styles.bitmojiImageContainer}>
               <Image style={styles.bitmojiImage} source={require("../../assets/snapchat/tempBookSticker.png")}/>
@@ -231,24 +244,39 @@ const styles = StyleSheet.create({
   bottomImagesContainer:
   {
     flexDirection: "row",
-    marginTop: 20,
-    marginLeft: 40,
+    // marginTop: 20,
+    // marginLeft: 40,
   },
-  badgeImage: {
-    height: 84,
+  coordinatorImage: {
+    height: 80,
     width: 73,
   },
   bitmojiImage: {
-    height: 154,
-    width: 188,
+    height: 210,
+    width: 250,
   },
-  badgeImageContainer: {
-    // marginLeft: 30,
+  coordinatorImageContainer: {
+    // marginLeft: "-10%",
+    // marginTop: "-7%",
+    flexDirection: "row",
+    marginLeft: "2%",
     
   },
   bitmojiImageContainer: {
-    marginLeft: 100,
-    marginTop: -25,
+    // marginLeft: 40,
+    // marginTop: -25,
   },
+  coordinatorNameContainer: {
+    marginTop: "5%",
+  },
+  contactButtonContainer: {
+    height: 30,
+    width: 86,
+    marginLeft: "3%",
+  },
+  contactButtonStyle: {
+    height: 45,
+    width: 105,
+  }
 
 });
