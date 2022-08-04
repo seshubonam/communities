@@ -56,12 +56,10 @@ export default function ProfileScreen({ navigation }) {
               
               <ProfileBadge imageUrl={require("../../assets/snapchat/SnapAcademiesBadgeIcon.png")} text={"Snap Academies"} containerStyle={styles.profileBadgeContainerStyle} textStyle={styles.profileBadgeIconText} />
             </View>
-            
-            <View style={ [styles.profilefindFriends, styles.shadowProp ] }>
-            </View>
 
-            <ProfileCard text={"My Stories"} />
-            <ProfileCard text={"Friends"} style={ styles.profileCardContainerStyle }/>
+            <ProfileCard topHeader={""} header={"Find Friends on Snapchat"} subtext={"Tap to sync your contacts"} leftImage={require("../../assets/snapchat/findFriends.png")} rightImage={require("../../assets/snapchat/findFriendsClose.png")} />
+            <ProfileCard topHeader={"Stories"} header={"Add to My Story"} subtext={""} leftImage={require("../../assets/snapchat/cameraIcon.png")} rightImage={require("../../assets/snapchat/addToMyStoryIcon.png")} style={styles.profileCardContainerStyle}/>
+            <ProfileCard topHeader={"Friends"} header={"Add Friends"} subtext={""} leftImage={require("../../assets/snapchat/addFriendsIcon.png")} rightImage={require("../../assets/snapchat/addFriendsArrow.png")} style={styles.profileCardContainerStyle}/>
 
             <View style={ [styles.profilemyFriends, styles.shadowProp ] }>
             </View>
@@ -168,7 +166,6 @@ const styles = StyleSheet.create({
   },
   profileCardContainerStyle: {
     marginTop: 20,
-    marginBottom: 2,
   },
   shadowProp: {
     shadowColor: '#171717',
