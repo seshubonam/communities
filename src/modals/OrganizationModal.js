@@ -123,7 +123,7 @@ export default function OrganizationModal({ navigation }) {
               </View>
             </View>
             <View style={styles.bitmojiImageContainer}>
-              <Image style={styles.bitmojiImage} source={require("../../assets/snapchat/tempBookSticker.png")}/>
+              <Image style={styles.bitmojiImage} source={require("../../assets/snapchat/bookStickerBitmoji.png")}/>
             </View>
             
            </View> 
@@ -252,8 +252,8 @@ const styles = StyleSheet.create({
     width: 73,
   },
   bitmojiImage: {
-    height: 210,
     width: 250,
+    height: 210,
   },
   coordinatorImageContainer: {
     // marginLeft: "-10%",
