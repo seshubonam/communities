@@ -4,8 +4,9 @@ import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'reac
 import CommunitiesCard from '../components/CommunitiesCard';
 import SearchBox from '../components/SearchBox';
 
-export default function CommunitiesModal({ navigation }) {
-
+export default function CommunitiesModal({ navigation, route }) {
+  const newRoute = {"joined": false}
+  const { joined } = route.params ? route.params : newRoute;
   return (
     <View style={ styles.container }>
       <View style={ styles.communitiesContainer }>
@@ -38,7 +39,7 @@ export default function CommunitiesModal({ navigation }) {
               navigation.navigate("Organization");
             }}
           >
-            <CommunitiesCard name={"Code Talk"} description={"Technology Training Program"} distance={"1.4 Miles"} imageUrl={require("../../assets/snapchat/CodeTalkLogo.png")} />
+            <CommunitiesCard navigation={navigation} name={"Code Talk"} description={"Technology Training Program"} distance={"1.4 Miles"} imageUrl={require("../../assets/snapchat/CodeTalkLogo.png")} joined={joined} active={true} />
           </TouchableOpacity>
 
           <CommunitiesCard name={"Santa Monica College"} description={"Community College"} distance={"2.9 Miles"} imageUrl={require("../../assets/snapchat/SMCLogo.jpg")} />
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   communitiesContainer: {
-    height: "51%",
+    height: "53%",
     width: "100%",
     backgroundColor: "#f7f8f8",
     borderTopLeftRadius: 20,

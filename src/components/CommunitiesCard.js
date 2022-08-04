@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 
 
-export default function CommunitiesCard ({ name, description, distance, imageUrl }) {
-  const [selected, setSelected] = useState(false);
+export default function CommunitiesCard ({ name, description, distance, imageUrl, navigation, joined, active }) {
+  const [selected, setSelected] = useState(joined ? true : false);
   return (
     <View style={ styles.featuredCommunitiesCard }>
 
@@ -19,16 +19,35 @@ export default function CommunitiesCard ({ name, description, distance, imageUrl
       </View>
 
       <View style={ styles.featuredCommunitiesCardRight}>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={() => {
-            setSelected(!selected);
-          }}
-        >
-          <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4FAAF8" : "#eceef0" }] }>
-            <Text style={ [styles.featuredCommunityJoinText, selected ? styles.selected : ""] }>{ selected ? "Joined" : "Join"}</Text>
-          </View>
-        </TouchableOpacity>
+        {
+          active ? 
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => {
+                // navigation.navigate("Map");
+                setSelected(!selected);
+                if (!selected) {
+                  navigation.goBack();
+                  navigation.navigate("Membership", {joined: !selected});
+                }
+              }}
+              >
+              <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4FAAF8" : "#eceef0" }] }>
+                <Text style={ [styles.featuredCommunityJoinText, selected ? styles.selected : ""] }>{ selected ? "Joined" : "Join"}</Text>
+              </View>
+            </TouchableOpacity> :
+
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => {
+                setSelected(!selected);
+              }}
+              >
+              <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4FAAF8" : "#eceef0" }] }>
+                <Text style={ [styles.featuredCommunityJoinText, selected ? styles.selected : ""] }>{ selected ? "Joined" : "Join"}</Text>
+              </View>
+            </TouchableOpacity>
+        }
       </View>
     </View>
   );
