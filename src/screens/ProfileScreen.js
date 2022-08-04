@@ -192,12 +192,12 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     flexDirection: "row",
     marginTop: 10,
-    paddingLeft: 10,
+    paddingLeft: 5,
     alignItems: "center"
   },
   profileMyFriendsTextImage: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
     resizeMode: "contain"
   },
   profileMyFriendsTextRight: {
