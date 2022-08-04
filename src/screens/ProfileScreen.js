@@ -58,10 +58,20 @@ export default function ProfileScreen({ navigation }) {
             </View>
 
             <ProfileCard topHeader={""} header={"Find Friends on Snapchat"} subtext={"Tap to sync your contacts"} leftImage={require("../../assets/snapchat/findFriends.png")} rightImage={require("../../assets/snapchat/findFriendsClose.png")} />
-            <ProfileCard topHeader={"Stories"} header={"Add to My Story"} subtext={""} leftImage={require("../../assets/snapchat/cameraIcon.png")} rightImage={require("../../assets/snapchat/addToMyStoryIcon.png")} style={styles.profileCardContainerStyle}/>
+            <ProfileCard topHeader={"My Stories"} header={"Add to My Story"} subtext={""} leftImage={require("../../assets/snapchat/cameraIcon.png")} rightImage={require("../../assets/snapchat/addToMyStoryIcon.png")} style={styles.profileCardContainerStyle}/>
             <ProfileCard topHeader={"Friends"} header={"Add Friends"} subtext={""} leftImage={require("../../assets/snapchat/addFriendsIcon.png")} rightImage={require("../../assets/snapchat/addFriendsArrow.png")} style={styles.profileCardContainerStyle}/>
 
-            <View style={ [styles.profilemyFriends, styles.shadowProp ] }>
+            <View style={ [styles.profileMyFriends, styles.shadowProp ] }>
+              <Image style={ styles.profileMyFriendsImage } source={require("../../assets/snapchat/profileFriends.png")} />
+              
+              <View style={ styles.profileMyFriendsTextContainer }>
+                <View style={ styles.profileMyFriendsTextLeft }>
+                  <Image style={ styles.profileMyFriendsTextImage } source={require("../../assets/snapchat/addFriendsIcon.png")} />
+                </View>
+                <View style={ styles.profileMyFriendsTextRight }>
+                  <Text style={ styles.profileMyFriendsText }>My Friends</Text>
+                </View>
+              </View>
             </View>
           </View>
         </View>
@@ -155,14 +165,19 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     borderRadius: 10,
   },
-  profilemyFriends: {
+  profileMyFriends: {
     backgroundColor: "#fff",
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 50,
+    paddingLeft: 0,
+    paddingRight: 0,
+    paddingTop: 10,
     paddingBottom: 60,
     marginTop: 10,
     borderRadius: 10,
+  },
+  profileMyFriendsImage: {
+    width: "100%",
+    height: 100,
+    resizeMode: "contain"
   },
   profileCardContainerStyle: {
     marginTop: 20,
@@ -173,4 +188,23 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.02,
     shadowRadius: 10,
   },
+  profileMyFriendsTextContainer: {
+    marginLeft: 10,
+    flexDirection: "row",
+    marginTop: 10,
+    paddingLeft: 10,
+    alignItems: "center"
+  },
+  profileMyFriendsTextImage: {
+    width: 30,
+    height: 30,
+    resizeMode: "contain"
+  },
+  profileMyFriendsTextRight: {
+    marginLeft: 15,
+  },
+  profileMyFriendsText: {
+    fontWeight: "700",
+    fontSize: 15,
+  }
 });
