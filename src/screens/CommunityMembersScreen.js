@@ -3,6 +3,8 @@ import { View, Text, ImageBackground, TouchableOpacity, Image, StyleSheet } from
 import MapTopIcon from '../components/MapTopIcon';
 import ProfileBadge from '../components/ProfileBadge';
 import ProfileCard from '../components/ProfileCard';
+import SearchBox from '../components/SearchBox.js';
+import MembersCard from '../components/MembersCard.js';
 
 export default function CommunityMembersScreen({ navigation }) {
   return (
@@ -21,7 +23,34 @@ export default function CommunityMembersScreen({ navigation }) {
               </View>
             </TouchableOpacity>
           </View>
-  
+
+          <View style={styles.organizationLogoContainer}>
+            <View style={styles.organizationLogoStory}>
+              <Image style={styles.organizationLogoImage} source={require("../../assets/snapchat/CodeTalkLogo.png")}/>
+            </View>
+          </View>
+          
+          <View style={styles.organzationNameContainer}>
+            <View style={styles.organizationName}>
+              <Text style={{fontWeight: "600", fontSize: 23,}}>
+                CodeTalk
+              </Text>
+              </View>
+              <View style={styles.organizationDescription}>
+              <Text style={{fontWeight: "300", fontSize: 17}}>
+                Technology Training Program
+              </Text>
+              </View>          
+          </View>
+          <View style={styles.searchBoxContainer}>
+              <SearchBox initialText={"Search Members"}/>
+          </View>
+          <View style={styles.membersContainer}>
+              <MembersCard name="Ashley Beasley" imageUrl={require("../../assets/snapchat/Ashley.png")}/>
+              <MembersCard name="Diego Godinez" imageUrl={require("../../assets/snapchat/Diego.png")}/>
+              <MembersCard name="Vanessa Malabanan" imageUrl={require("../../assets/snapchat/Vanessa.png")}/>
+          </View>
+
         </View>
       </View>
     </View>
@@ -69,4 +98,40 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.02,
     shadowRadius: 10,
   },
+  organizationLogoContainer: {
+    marginTop: "10%",
+    alignSelf: "center",
+
+  },
+  organizationLogoImage: {
+    height: 100,
+    width: 100,
+    borderRadius: 50,
+  },
+  organizationLogoStory: {
+    backgroundColor: "yellow",
+    borderRadius: 50,
+    width: 105,
+    height: 105,
+    alignItems: "center",
+    alignContent: "center",
+    justifyContent: "center",
+  },
+  organzationNameContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: "1%",
+  },
+  organizationName: {
+    justiifyContent: "center",
+  },
+  organizationDescription: {
+    alignItems: "center",
+  },
+  searchBoxContainer: {
+    marginTop: "5%",
+  },
+  membersContainer: {
+    marginTop: "5%",
+  }
 });
