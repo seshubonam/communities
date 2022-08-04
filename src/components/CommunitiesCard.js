@@ -1,10 +1,13 @@
-import React from "react";
-import { View, StyleSheet, Image, Text } from "react-native";
+import React, { useState } from "react";
+import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 
 
 export default function CommunitiesCard ({ name, description, distance, imageUrl }) {
-    return (
-      <View style={ styles.featuredCommunitiesCard }>
+  const [selected, setSelected] = useState(false);
+  return (
+    <View style={ styles.featuredCommunitiesCard }>
+
+      <View style={ styles.featuredCommunitiesCardLeft}>
         <View style={ styles.featuredCommunityStoryContainer }>
           <Image style={ styles.featuredCommunityLogo } source={imageUrl} />
         </View>
@@ -13,12 +16,22 @@ export default function CommunitiesCard ({ name, description, distance, imageUrl
           <Text style={ styles.communityHeaderText }>{ name }</Text>
           <Text style={ styles.communityText }>{description} • {distance}</Text>
         </View>
+      </View>
 
-        <View style={ styles.featuredCommunityJoinContainer }>
-          <Text style={ styles.featuredCommunityJoinText }>Join</Text>
-        </View>
+      <View style={ styles.featuredCommunitiesCardRight}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => {
+            setSelected(!selected);
+          }}
+        >
+          <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4FAAF8" : "#eceef0" }] }>
+            <Text style={ [styles.featuredCommunityJoinText, selected ? styles.selected : ""] }>{ selected ? "Joined" : "Join"}</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
-    );
+  );
 };
 
 const styles = StyleSheet.create({
@@ -32,6 +45,11 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     marginBottom: 15,
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  featuredCommunitiesCardLeft: {
+    flexDirection: "row",
   },
   featuredCommunityStoryContainer: {
     width: 50,
@@ -49,29 +67,27 @@ const styles = StyleSheet.create({
   },
   featuredCommunityTextContainer: {
     marginLeft: 15,
+    marginTop: 5
   },
   communityHeaderText: {
     fontWeight: "600",
     fontSize: 16,
-    marginTop: 5,
     marginBottom: 5,
   },
   communityText: {
-    fontSize: 13,
+    fontSize: 12,
   },
   featuredCommunityJoinContainer: {
-    position: "absolute",
-    top: 26,
-    right: 15,
-    backgroundColor: "#eceef0",
-    borderRadius: 15,
-    width: 50,
-    height: 30,
+    borderRadius: 50,
+    marginTop: 5,
   },
   featuredCommunityJoinText: {
-    textAlign: "center",
     fontWeight: "800",
-    marginTop: 7,
-    fontSize: 12
+    fontSize: 12,
+    padding: 8,
+    borderRadius: 50
+  },
+  selected: {
+    color: "#fff"
   }
 });
