@@ -135,12 +135,12 @@ const styles = StyleSheet.create({
   },
   profileTopRightTextHeader: {
     fontWeight: "700",
-    fontSize: 18,
-    marginBottom: 12,
+    fontSize: 20,
+    marginBottom: 8,
   },
   profileTopRightText: {
     color: "#666d77",
-    fontWeight: "700",
+    fontWeight: "600",
   },
   profileBadges: {
     flexDirection: "row",
