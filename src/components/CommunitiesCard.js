@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   featuredCommunityStoryContainer: {
     width: 50,
     height: 50,
-    backgroundColor: "yellow",
+    backgroundColor: "#FFFC00",
     borderRadius: 50,
     alignContent: "center",
     alignItems: "center",
