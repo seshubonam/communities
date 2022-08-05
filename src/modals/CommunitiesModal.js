@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
   communitiesContentTop: {
     flexDirection: "row",
     justifyContent: "space-between",
+    // width: 7,
   },
   closeCommunitiesModalContainer: {
     backgroundColor: "#eceef0",
@@ -116,8 +117,8 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   closeCommunitiesIcon: {
-    width: 15,
-    height: 15
+    width: 5,
+    height: 5
   },
 
   featuredCommunitiesContainer: {

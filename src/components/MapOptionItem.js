@@ -16,18 +16,18 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   mapOptionsIconContainerTransparent: {
-    width: 30,
+    width: 33,
     marginTop: 10,
     backgroundColor: "rgba(255, 255, 255, 0.4)",
     borderRadius: 50,
   },
   mapOptionIcon: {
-    width: 35,
-    height: 35,
+    width: 33,
+    height: 33,
   },
   mapOptionIconTransparent: {
-    width: 30,
-    height: 30,
+    width: 33,
+    height: 33,
   },
   shadowProp: {
     shadowColor: '#171717',

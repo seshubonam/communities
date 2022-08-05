@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 110,
     right: 10,
-    height: 185,
-    width: 50,
+    height: 180,
+    width: 40,
     alignItems: "center",
   },
 });

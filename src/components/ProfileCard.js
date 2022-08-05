@@ -65,11 +65,11 @@ const styles = StyleSheet.create({
   },
   profileCardContainerHeaderText: {
     fontSize: 16,
-    fontWeight: "600",
+    fontWeight: "500",
   },
 
   profileCardContainerSubText: {
-    color: "#C4C4C4",
+    color: "grey",
   },
   shadowProp: {
     shadowColor: '#171717',

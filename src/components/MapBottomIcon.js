@@ -20,8 +20,8 @@ export default function MapBottomIcon ({ imageUrl, iconText }) {
 
 const styles = StyleSheet.create({
   iconContainer: {
-    width: 70,
-    height: 70,
+    width: 60,
+    height: 60,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "white",
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   iconImage: {
-    width: 55,
-    height: 55,
+    width: 45,
+    height: 45,
     borderRadius: 50,
   },
   iconTextContainer: {
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     paddingTop: 3,
     paddingBottom: 3,
     bottom: -5,
-    width: 85,
+    width: 82,
   },
   iconText: {
     fontSize: 11,

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 4,
     paddingBottom: 4,
-    paddingLeft: 8,
+    paddingLeft: 5,
     paddingRight: 8,
   },
   profileBadgeImage: {
