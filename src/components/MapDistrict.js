@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   currentLocationStoryContainer: {
-    backgroundColor: "yellow",
+    backgroundColor: "#FFFC00",
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",
