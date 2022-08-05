@@ -17,14 +17,14 @@ export default function SearchBox ({ initialText }) {
 
 const styles = StyleSheet.create({
   input: {
-    height: 45,
+    height: 35,
     width: "100%",
     backgroundColor: "#ebeced",
     borderRadius: 50,
     paddingLeft: 70,
     paddingRight: 60,
     fontWeight: "700",
-    fontSize: 18,
+    fontSize: 16,
     color: "#666d77",
   },
   searchCommunitiesContainer: {
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
     left: 15,
   },
   searchCommunitiesIcon: {
-    width: 25,
-    height: 25,
+    width: 15,
+    height: 15,
   },
   shadowProp: {
     shadowColor: '#171717',
