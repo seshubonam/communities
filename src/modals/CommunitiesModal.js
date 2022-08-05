@@ -49,7 +49,9 @@ export default function CommunitiesModal({ navigation, route }) {
 
           <View style={ styles.communitiesContentTop }>
 
-            <SearchBox initialText={"Discover Communities"} />
+            <View style={ styles.communitiesSearchContainer }>
+              <SearchBox initialText={"Discover Communities"} />
+            </View>
 
             <TouchableOpacity
               activeOpacity={0.7}
@@ -109,16 +111,18 @@ const styles = StyleSheet.create({
   communitiesContentTop: {
     flexDirection: "row",
     justifyContent: "space-between",
-    // width: 7,
+  },
+  communitiesSearchContainer: {
+    width: "85%",
   },
   closeCommunitiesModalContainer: {
     backgroundColor: "#eceef0",
-    padding: 15,
+    padding: 13,
     borderRadius: 50,
   },
   closeCommunitiesIcon: {
-    width: 5,
-    height: 5
+    width: 10,
+    height: 10
   },
 
   featuredCommunitiesContainer: {
