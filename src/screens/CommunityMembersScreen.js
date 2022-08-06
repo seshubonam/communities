@@ -44,7 +44,7 @@ export default function CommunityMembersScreen({ navigation }) {
 
           <View style={styles.buttonsContainer}>
             <View style={styles.communityMembersButton}>
-              <Text style={{color: "#000", fontWeight: "700"}}>Members Chat</Text>
+              <Text style={{color: "#000", fontWeight: "700"}}>Community Chat</Text>
             </View>
             <View style={styles.communityMembersButton}>
               <Text style={{color: "#000", fontWeight: "700"}}>Resources</Text>
