@@ -65,7 +65,7 @@ export default function OrganizationModal({ navigation }) {
             </View>
 
             <View style={styles.communityInfoRight}>
-              <Text style={{ fontWeight: "600", fontSize: 18, marginBottom: 5 }}>CodeTalk</Text>
+              <Text style={{ fontWeight: "600", fontSize: 18, marginBottom: 5 }}>Code Talk</Text>
               <Text style={{ fontWeight: "500", fontSize: 14, color: "#666d77" }}>Technology Training Program</Text>
             </View>
           </View>
