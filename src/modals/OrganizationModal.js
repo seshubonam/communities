@@ -40,18 +40,19 @@ export default function OrganizationModal({ navigation }) {
       <View style={styles.organizationContainer}>
         <View style={styles.modalNotch}></View>
         <View style={styles.organizationContent}>
-          <View style={styles.organizationContentTop}>
-            <TouchableOpacity
-              activeOpacity={0.7}
-              onPress={() => {
-                navigation.popToTop();
-              }}
-            >
-              <View style={styles.closeOrganizationModalContainer}>
-                <Image style={styles.closeOrganizationIcon} source={require("../../assets/snapchat/CommunitiesModalXIcon.png")} />
-              </View>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={{ width: "100%"}}
+            activeOpacity={0.7}
+            onPress={() => {
+              // navigation.popToTop();
+              navigation.goBack()
+              navigation.navigate("Communities")
+            }}
+          >
+            <View style={styles.closeOrganizationModalContainer}>
+              <Image style={styles.closeOrganizationIcon} source={require("../../assets/snapchat/CommunitiesModalXIcon.png")} />
+            </View>
+          </TouchableOpacity>
 
           <View style={ styles.communityInfo }>
 
@@ -156,7 +157,7 @@ export default function OrganizationModal({ navigation }) {
                 <Text style={{ fontWeight: "300" }}>Outreach Coordinator</Text>
 
                 <View style={styles.contactButtonContainer}>
-                  <Text style={{ fontSize: 15, fontWeight: "600", color: "#fff", textAlign: "center" }}>Contact</Text>
+                  <Text style={{ fontSize: 12, fontWeight: "600", color: "#fff", textAlign: "center" }}>Contact</Text>
                 </View>
               </View>
 
@@ -203,9 +204,6 @@ const styles = StyleSheet.create({
     right: "45%",
     top: 5,
     borderRadius: 50,
-
-  },
-  organizationContentTop: {
 
   },
   closeOrganizationModalContainer: {
@@ -318,9 +316,9 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     paddingLeft: 30,
     paddingRight: 30,
-    paddingTop: 15,
-    paddingBottom: 15,
-    marginRight: 15,
+    paddingTop: 12,
+    paddingBottom: 12,
+    marginRight: 12,
   },
   communityGreyButtonImage: {
     width: 15,
@@ -330,8 +328,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#eceef0",
     borderRadius: 50,
     width: "100%",
-    paddingTop: 15,
-    paddingBottom: 15,
+    paddingTop: 12,
+    paddingBottom: 12,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -363,8 +361,8 @@ const styles = StyleSheet.create({
     borderRadius: "50",
     paddingLeft: 30,
     paddingRight: 30,
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: 7,
+    paddingBottom: 7,
     alignContent: "center",
     justifyContent: "center",
     marginTop: 5,
