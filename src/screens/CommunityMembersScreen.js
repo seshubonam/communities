@@ -1,8 +1,6 @@
 import React from 'react'
 import { View, Text, ImageBackground, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import MapTopIcon from '../components/MapTopIcon';
-import ProfileBadge from '../components/ProfileBadge';
-import ProfileCard from '../components/ProfileCard';
+
 import SearchBox from '../components/SearchBox.js';
 import MembersCard from '../components/MembersCard.js';
 

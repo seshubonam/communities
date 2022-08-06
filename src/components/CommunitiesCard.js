@@ -37,7 +37,7 @@ export default function CommunitiesCard ({ communityId, name, description, dista
                 
               }}
               >
-              <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4FAAF8" : "#eceef0" }] }>
+              <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4faaf8" : "#eceef0" }] }>
                 <Text style={ [styles.featuredCommunityJoinText, selected ? styles.selected : ""] }>{ selected ? "Joined" : "Join"}</Text>
               </View>
             </TouchableOpacity> :
@@ -49,7 +49,7 @@ export default function CommunitiesCard ({ communityId, name, description, dista
                 onJoin(communityId, !selected);
               }}
               >
-              <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4FAAF8" : "#eceef0" }] }>
+              <View style={ [styles.featuredCommunityJoinContainer, { backgroundColor: selected ? "#4faaf8" : "#eceef0" }] }>
                 <Text style={ [styles.featuredCommunityJoinText, selected ? styles.selected : ""] }>{ selected ? "Joined" : "Join"}</Text>
               </View>
             </TouchableOpacity>
